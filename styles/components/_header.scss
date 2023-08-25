@@ -1,6 +1,17 @@
+@font-face {
+    font-family: 'circular_spotify_textbold';
+    src: url('../../fonts/circularspotifytext-bold-webfont.woff2') format('woff2'),
+         url('../../fonts/circularspotifytext-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 header {
+    font-family: 'circular_spotify_textbold';
     padding-top: 20px;
     text-align: center;
     background-color: black;
     color: 	#1DB954;
+    font-size: 32px;
 }

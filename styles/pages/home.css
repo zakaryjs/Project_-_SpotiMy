@@ -1,5 +1,12 @@
+@font-face {
+  font-family: "circular_spotify_textmedium";
+  src: url("../../fonts/circularspotifytext-medium-webfont.woff2") format("woff2"), url("../../fonts/circularspotifytext-medium-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 main {
   background-color: black;
+  font-family: "circular_spotify_textmedium";
 }
 main .search-bar {
   display: flex;
@@ -21,6 +28,7 @@ main form {
 main input {
   all: unset;
   color: black;
+  margin-right: 10px;
 }
 main input:focus {
   color: white;
