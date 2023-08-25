@@ -1,5 +1,8 @@
 main {
     background-color: black;
+    .search-bar {
+        display: flex;
+    }
     form {
         width: 300px;
         height: 60px;
@@ -7,13 +10,35 @@ main {
         display: flex;
         flex-direction: row;
         align-items: center;
+        justify-content: center;
         background-color: black;
+        outline: white;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 40px;
     }
     input {
         all: unset;
         color: black;
     }
+    input:focus {
+        color: white;
+    }
+    input:focus::placeholder {
+        color: transparent;
+    }
     ::placeholder {
         color: #1DB954;
+    }
+    img {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 25px;
+    }
+    p {
+        display: flex;
+        justify-content: center;
+        color: white;
     }
 }

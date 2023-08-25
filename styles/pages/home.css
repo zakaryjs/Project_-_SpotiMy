@@ -1,6 +1,9 @@
 main {
   background-color: black;
 }
+main .search-bar {
+  display: flex;
+}
 main form {
   width: 300px;
   height: 60px;
@@ -8,15 +11,40 @@ main form {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: center;
   background-color: black;
+  outline: white;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
 }
 main input {
   all: unset;
   color: black;
+}
+main input:focus {
+  color: white;
+}
+main input:focus::-moz-placeholder {
+  color: transparent;
+}
+main input:focus::placeholder {
+  color: transparent;
 }
 main ::-moz-placeholder {
   color: #1DB954;
 }
 main ::placeholder {
   color: #1DB954;
+}
+main img {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+}
+main p {
+  display: flex;
+  justify-content: center;
+  color: white;
 }/*# sourceMappingURL=home.css.map */
