@@ -4,39 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotimy</title>
+    <title>SpotiMy</title>
     <link rel="stylesheet" href="./index.css"/>
     <link rel="stylesheet" href="./styles/pages/home.css"/>
 </head>
 <body>
     <header>
         <div class="logo">
-            <p class="logo-name">Spotimy</p>
+            <p class="logo-name">SpotiMy</p>
         </div>
     </header>
     <main>
+        <script src="/scripts/index.js"></script>
         <!-- Search Bar -->
         <section class="search-bar">
-            <form id="search-bar-form">
-                <input type="text" placeholder="Enter Last.FM username...">
+            <form name="search-form" id="search-bar-form">
+                <input type="text" name="search-name" placeholder="Enter Last.FM username...">
                 <button><img src="./images/search_icon_small.png"></button>
             </form>
         </section>
         <section class="album">
-            <div class="album-cover">
-                <img src="https://lastfm.freetls.fastly.net/i/u/300x300/d897b8b9afe75c015ae753ff914f9021.jpg">
+            <div id="album-cover">
+                
             </div>
             <div class="audio-spectrum">
                 <p>placeholder</p>
             </div>
         </section>
         <section class="song-info">
-            <div class="song-info-text">
-                <p id="song-name">song name</p>
-                <p id="album-name">album name</p>
-                <p id="artist-name">artist name</p>
-                <p id="release-year">release year</p>
-                <p id="total-number-of-listens">total number of Scrobbles</p>
+            <div id="song-info-text">
+                <p id="song-name"></p>
+                <p id="album-name"></p>
+                <p id="artist-name"></p>
+                <p></p>
+                <p id="scrobbled-by">Scrobbled by: </p>
+                <p id="total-number-of-listens">Total Scrobble Count: </p>
             </div>
         </section>
     </main>
