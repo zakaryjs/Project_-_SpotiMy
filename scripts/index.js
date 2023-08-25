@@ -1,5 +1,10 @@
 const url = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=Zagmore06&api_key=&limit=1&nowplaying=true&format=json';
 
+function logInput () {
+    let newValue = ((document.getElementById('search-name').value));
+    console.log(newValue);
+}
+
 // async function to get the json from the url provided
 const getData = async () => {
     const response = await fetch(url);
