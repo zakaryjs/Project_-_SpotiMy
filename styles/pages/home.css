@@ -4,6 +4,10 @@
   font-weight: normal;
   font-style: normal;
 }
+body {
+  border: 1px solid #1DB954;
+}
+
 main {
   background-color: black;
   font-family: "circular_spotify_textmedium";

@@ -14,6 +14,7 @@ form.addEventListener("submit", function(event) {
     console.log(newValue);
     url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${newValue}&api_key=&limit=1&nowplaying=true&format=json`;
     useData();
+    form.reset();
 })
 
 function logInput () {
