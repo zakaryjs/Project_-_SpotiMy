@@ -15,12 +15,11 @@
         </div>
     </header>
     <main>
-        <script src="/scripts/index.js"></script>
         <!-- Search Bar -->
         <section class="search-bar">
             <form name="search-form" id="search-bar-form">
-                <input type="text" onkeypress="return event.keyCode != 13;" id="search-name" placeholder="Enter Last.FM username...">
-                <button type="button" onclick="logInput()"><img src="./images/search_icon_small.png"></button>
+                <input type="text" id="search-name" placeholder="Enter Last.FM username...">
+                <!-- <button type="submit" onclick="logInput()"><img src="./images/search_icon_small.png"></button> -->
             </form>
         </section>
         <section class="album">
@@ -37,10 +36,11 @@
                 <p id="album-name"></p>
                 <p id="artist-name"></p>
                 <p></p>
-                <p id="scrobbled-by">Scrobbled by: </p>
-                <p id="total-number-of-listens">Total Scrobble Count: </p>
+                <p id="scrobbled-by"></p>
+                <p id="total-number-of-listens"></p>
             </div>
         </section>
     </main>
+    <script src="/scripts/index.js"></script>
 </body>
 </html>

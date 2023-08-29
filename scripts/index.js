@@ -1,4 +1,20 @@
-let url = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=Zagmore06&api_key=&limit=1&nowplaying=true&format=json';
+var url = null;
+
+let form = document.getElementById('search-bar-form');
+
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById('album-cover').innerHTML = "";
+    document.getElementById('song-name').innerHTML = "";
+    document.getElementById('album-name').innerHTML = "";
+    document.getElementById('artist-name').innerHTML = "";
+    document.getElementById('total-number-of-listens').innerHTML = "Total Scrobble Count: ";
+    document.getElementById('scrobbled-by').innerHTML = "Scrobbled by: ";
+    let newValue = ((document.getElementById('search-name').value));
+    console.log(newValue);
+    url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${newValue}&api_key=&limit=1&nowplaying=true&format=json`;
+    useData();
+})
 
 function logInput () {
     let newValue = ((document.getElementById('search-name').value));
@@ -6,7 +22,7 @@ function logInput () {
 }
 
 // async function to get the json from the url provided
-const getData = async () => {
+let getData = async () => {
     const response = await fetch(url);
     data = await response.json();
     console.log(data);
@@ -27,12 +43,14 @@ const getData = async () => {
 }
 
 // assigns getData function to new variable
-const dataPromise = getData();
+let dataPromise = async () => {
+    await getData();
+} 
 
 // async function to assign the data retrieved from the url to html elements, in order to display to user
-const useData = async () => {
+let useData = async () => {
     // only start when the getData function has completed
-    await dataPromise;
+    await dataPromise();
     // gets the div with the id album-cover and assigns it to a variable named coverP
     let coverP = document.getElementById('album-cover');
     // assigns the image retrieved in getData to the div with the id album-cover
@@ -70,4 +88,4 @@ const useData = async () => {
 }
 
 // call the useData function
-useData()
+// useData()
