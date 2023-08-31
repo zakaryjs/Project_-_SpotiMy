@@ -16,6 +16,20 @@ header #sub-logo-name {
   font-size: 24px;
 }
 
+@font-face {
+  font-family: "circular_spotify_textbold";
+  src: url("../../fonts/circularspotifytext-bold-webfont.woff2") format("woff2"), url("../../fonts/circularspotifytext-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+footer {
+  font-family: "circular_spotify_textbold";
+  text-align: center;
+  background-color: black;
+  color: #1DB954;
+  font-size: 16px;
+}
+
 body {
   margin: 0;
   padding: 0;
