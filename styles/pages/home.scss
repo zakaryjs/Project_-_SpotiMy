@@ -55,4 +55,13 @@ main {
         justify-content: center;
         color: white;
     }
+    h3 {
+        display: flex;
+        justify-content: center;
+        color: white;
+        margin-bottom: 50px;
+    }
+    ul {
+        padding-inline-start: 0px;
+    }
 }

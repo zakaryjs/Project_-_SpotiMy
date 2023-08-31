@@ -12,6 +12,9 @@ header {
   color: #1DB954;
   font-size: 32px;
 }
+header #sub-logo-name {
+  font-size: 24px;
+}
 
 body {
   margin: 0;

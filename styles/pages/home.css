@@ -58,4 +58,13 @@ main p {
   display: flex;
   justify-content: center;
   color: white;
+}
+main h3 {
+  display: flex;
+  justify-content: center;
+  color: white;
+  margin-bottom: 50px;
+}
+main ul {
+  padding-inline-start: 0px;
 }/*# sourceMappingURL=home.css.map */

@@ -1,9 +1,11 @@
 var url = null;
+var element = document.getElementById('site-first-load');
 
 let form = document.getElementById('search-bar-form');
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
+    element.remove();
     document.getElementById('album-cover').innerHTML = "";
     document.getElementById('song-name').innerHTML = "";
     document.getElementById('album-name').innerHTML = "";
