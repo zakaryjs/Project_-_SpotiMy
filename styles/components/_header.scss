@@ -34,3 +34,19 @@ header {
         }
     }
 }
+
+@media screen and (min-width: 1300px) {
+    header {
+        #sub-logo-name {
+            margin-bottom: 20px;
+        }
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    header {
+        #sub-logo-name {
+            margin-bottom: 5px;
+        }
+    }
+}

@@ -30,6 +30,16 @@ header #sub-logo-name {
     margin-bottom: 75px;
   }
 }
+@media screen and (min-width: 1300px) {
+  header #sub-logo-name {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  header #sub-logo-name {
+    margin-bottom: 5px;
+  }
+}
 @font-face {
   font-family: "circular_spotify_textbold";
   src: url("../../fonts/circularspotifytext-bold-webfont.woff2") format("woff2"), url("../../fonts/circularspotifytext-bold-webfont.woff") format("woff");
