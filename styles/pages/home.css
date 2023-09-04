@@ -67,4 +67,7 @@ main h3 {
 }
 main ul {
   padding-inline-start: 0px;
+}
+main #album-name {
+  text-align: center;
 }/*# sourceMappingURL=home.css.map */
