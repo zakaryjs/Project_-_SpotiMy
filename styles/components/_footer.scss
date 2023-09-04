@@ -14,3 +14,11 @@ footer {
     color: 	#1DB954;
     font-size: 16px;
 }
+
+@media screen and (min-width: 768px) {
+    footer {
+        p {
+            font-size: 24px;
+        }
+    }
+}
