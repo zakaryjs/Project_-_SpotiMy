@@ -18,6 +18,23 @@ form.addEventListener("submit", function(event) {
     url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${newValue}&api_key=&limit=1&nowplaying=true&format=json`;
     useData();
     form.reset();
+        setInterval(async () => {
+            const newResponse = await fetch(url);
+            newData = await newResponse.json();
+            console.log(newData)
+            if (newData.recenttracks.track[0].name == data.recenttracks.track[0].name) {
+                console.log('no updates')
+            } else {
+                    document.getElementById('album-cover').innerHTML = "";
+                    document.getElementById('listening-now').innerHTML = "";
+                    document.getElementById('song-name').innerHTML = "";
+                    document.getElementById('album-name').innerHTML = "";
+                    document.getElementById('artist-name').innerHTML = "";
+                    document.getElementById('total-number-of-listens').innerHTML = "Total Scrobble Count: ";
+                    document.getElementById('scrobbled-by').innerHTML = "Scrobbled by: ";
+                    useData();
+            }
+        }, 10000);
 })
 
 function logInput () {
