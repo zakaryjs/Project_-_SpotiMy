@@ -7,6 +7,7 @@ form.addEventListener("submit", function(event) {
     event.preventDefault();
     element.remove();
     document.getElementById('album-cover').innerHTML = "";
+    document.getElementById('listening-now').innerHTML = "";
     document.getElementById('song-name').innerHTML = "";
     document.getElementById('album-name').innerHTML = "";
     document.getElementById('artist-name').innerHTML = "";
@@ -42,6 +43,8 @@ let getData = async () => {
     // assigns cover variable a new 'image', to which the source image is taken from the json
     cover = new Image();
     cover.src = data.recenttracks.track[0].image[3]['#text'];
+    nowplaying = data.recenttracks.track[0]['@attr'] ? data.recenttracks.track[0]['@attr'].nowplaying : null
+    console.log(nowplaying);
     return data;
 }
 
@@ -58,6 +61,11 @@ let useData = async () => {
     let coverP = document.getElementById('album-cover');
     // assigns the image retrieved in getData to the div with the id album-cover
     coverP.appendChild(cover);
+    let nowPlayingP = document.getElementById('listening-now');
+    if (nowplaying != null) {
+        nowplayingText = document.createTextNode(`${user} is listening right now!`);
+        nowPlayingP.appendChild(nowplayingText)
+    }
     // gets the paragraph with the id song-name and assigns it to a variable named songP
     let songP = document.getElementById('song-name');
     // creates new text node with data from songName variable
