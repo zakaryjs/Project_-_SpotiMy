@@ -71,6 +71,9 @@ main ul {
 main #album-name {
   text-align: center;
 }
+main #song-name {
+  text-align: center;
+}
 
 @media screen and (min-width: 768px) {
   h3 {
