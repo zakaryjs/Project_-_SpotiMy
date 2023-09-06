@@ -37,11 +37,6 @@ form.addEventListener("submit", function(event) {
         }, 20000);
 })
 
-function logInput () {
-    let newValue = ((document.getElementById('search-name').value));
-    console.log(newValue);
-}
-
 // async function to get the json from the url provided
 let getData = async () => {
     const response = await fetch(url);
