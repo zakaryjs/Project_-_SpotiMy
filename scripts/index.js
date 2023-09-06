@@ -34,7 +34,7 @@ form.addEventListener("submit", function(event) {
                     document.getElementById('scrobbled-by').innerHTML = "Scrobbled by: ";
                     useData();
             }
-        }, 10000);
+        }, 20000);
 })
 
 function logInput () {
