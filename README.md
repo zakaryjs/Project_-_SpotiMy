@@ -18,7 +18,7 @@
 
 ### Still to do:
 
-Tablet/Deskop grid based design
+Tablet/Deskop column based design
 
 Re-do intro screen
 
