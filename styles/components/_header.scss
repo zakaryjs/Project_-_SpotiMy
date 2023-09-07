@@ -50,3 +50,12 @@ header {
         }
     }
 }
+
+@media screen and (min-width: 1000px) {
+    header {
+        font-size: 36px;
+        #sub-logo-name {
+            font-size: 28px;
+        }
+    }
+}

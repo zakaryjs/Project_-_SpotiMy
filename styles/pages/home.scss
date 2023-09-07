@@ -89,3 +89,14 @@ main {
         font-size: 24px;
     }
 }
+
+@media screen and (min-width: 1000px) {
+    .album {
+        margin-bottom: 10%;
+    }
+    .song-info {
+        // margin-bottom: 10%;
+        margin-top: 7%;
+        font-size: 28px;
+    }
+}

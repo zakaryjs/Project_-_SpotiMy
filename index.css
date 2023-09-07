@@ -40,6 +40,14 @@ header #sub-logo-name {
     margin-bottom: 5px;
   }
 }
+@media screen and (min-width: 1000px) {
+  header {
+    font-size: 36px;
+  }
+  header #sub-logo-name {
+    font-size: 28px;
+  }
+}
 @font-face {
   font-family: "circular_spotify_textbold";
   src: url("../../fonts/circularspotifytext-bold-webfont.woff2") format("woff2"), url("../../fonts/circularspotifytext-bold-webfont.woff") format("woff");
@@ -66,4 +74,18 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+@media screen and (min-width: 1000px) {
+  main {
+    flex-wrap: nowrap;
+  }
+  main .album {
+    width: 50%;
+    float: left;
+  }
+  main .song-info {
+    float: right;
+    width: 50%;
+  }
 }/*# sourceMappingURL=index.css.map */
