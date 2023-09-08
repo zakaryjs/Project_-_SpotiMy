@@ -103,6 +103,7 @@ main #song-name {
 }
 @media screen and (min-width: 1300px) {
   .song-info {
+    margin-top: 2%;
     font-size: 40px;
   }
 }/*# sourceMappingURL=home.css.map */
