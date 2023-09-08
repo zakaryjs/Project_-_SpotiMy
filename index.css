@@ -48,6 +48,15 @@ header #sub-logo-name {
     font-size: 28px;
   }
 }
+@media screen and (min-width: 1300px) {
+  header {
+    font-size: 44px;
+  }
+  header #sub-logo-name {
+    font-size: 32px;
+    margin-bottom: 2%;
+  }
+}
 @font-face {
   font-family: "circular_spotify_textbold";
   src: url("../../fonts/circularspotifytext-bold-webfont.woff2") format("woff2"), url("../../fonts/circularspotifytext-bold-webfont.woff") format("woff");
@@ -65,6 +74,11 @@ footer {
 @media screen and (min-width: 768px) {
   footer p {
     font-size: 24px;
+  }
+}
+@media screen and (min-width: 1000px) {
+  footer p {
+    font-size: 28px;
   }
 }
 body {

@@ -100,4 +100,9 @@ main #song-name {
     margin-top: 7%;
     font-size: 28px;
   }
+}
+@media screen and (min-width: 1300px) {
+  .song-info {
+    font-size: 40px;
+  }
 }/*# sourceMappingURL=home.css.map */

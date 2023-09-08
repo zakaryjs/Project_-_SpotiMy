@@ -59,3 +59,13 @@ header {
         }
     }
 }
+
+@media screen and (min-width: 1300px) {
+    header {
+        font-size: 44px;
+        #sub-logo-name {
+            font-size: 32px;
+            margin-bottom: 2%;
+        }
+    }
+}

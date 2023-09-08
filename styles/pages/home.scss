@@ -95,8 +95,13 @@ main {
         margin-bottom: 10%;
     }
     .song-info {
-        // margin-bottom: 10%;
         margin-top: 7%;
         font-size: 28px;
+    }
+}
+
+@media screen and (min-width: 1300px) {
+    .song-info {
+        font-size: 40px;
     }
 }
