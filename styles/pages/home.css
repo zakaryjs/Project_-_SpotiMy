@@ -32,7 +32,6 @@ main form {
 main input {
   all: unset;
   color: black;
-  margin-right: 10px;
 }
 main input:focus {
   color: white;
@@ -63,7 +62,7 @@ main h3 {
   display: flex;
   justify-content: center;
   color: white;
-  margin-bottom: 50px;
+  text-align: center;
 }
 main ul {
   padding-inline-start: 0px;

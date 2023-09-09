@@ -34,7 +34,6 @@ main {
     input {
         all: unset;
         color: black;
-        margin-right: 10px;
     }
     input:focus {
         color: white;
@@ -59,7 +58,7 @@ main {
         display: flex;
         justify-content: center;
         color: white;
-        margin-bottom: 50px;
+        text-align: center;
     }
     ul {
         padding-inline-start: 0px;
