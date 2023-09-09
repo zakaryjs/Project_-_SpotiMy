@@ -1,18 +1,10 @@
-var url = null;
 var element = document.getElementById('site-first-load');
-
 let form = document.getElementById('search-bar-form');
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
     element.remove();
-    document.getElementById('album-cover').innerHTML = "";
-    document.getElementById('listening-now').innerHTML = "";
-    document.getElementById('song-name').innerHTML = "";
-    document.getElementById('album-name').innerHTML = "";
-    document.getElementById('artist-name').innerHTML = "";
-    document.getElementById('total-number-of-listens').innerHTML = "Total Scrobble Count: ";
-    document.getElementById('scrobbled-by').innerHTML = "Scrobbled by: ";
+    clearData();
     let newValue = ((document.getElementById('search-name').value));
     console.log(newValue);
     url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${newValue}&api_key=&limit=1&nowplaying=true&format=json`;
@@ -22,15 +14,9 @@ form.addEventListener("submit", function(event) {
             const newResponse = await fetch(url);
             newData = await newResponse.json();
             if (newData.recenttracks.track[0].name == data.recenttracks.track[0].name) {
-                console.log('Song has not changed.')
+                console.log('Song has not changed.');
             } else {
-                    document.getElementById('album-cover').innerHTML = "";
-                    document.getElementById('listening-now').innerHTML = "";
-                    document.getElementById('song-name').innerHTML = "";
-                    document.getElementById('album-name').innerHTML = "";
-                    document.getElementById('artist-name').innerHTML = "";
-                    document.getElementById('total-number-of-listens').innerHTML = "Total Scrobble Count: ";
-                    document.getElementById('scrobbled-by').innerHTML = "Scrobbled by: ";
+                    clearData();
                     console.log('Song changed! Updating data now...')
                     useData();
             }
@@ -112,4 +98,14 @@ let useData = async () => {
     let userText = document.createTextNode(user);
     // assigns userText node to the scrobbled-by paragraph 
     userP.appendChild(userText);
+}
+
+let clearData = () => {
+    document.getElementById('album-cover').innerHTML = "";
+    document.getElementById('listening-now').innerHTML = "";
+    document.getElementById('song-name').innerHTML = "";
+    document.getElementById('album-name').innerHTML = "";
+    document.getElementById('artist-name').innerHTML = "";
+    document.getElementById('total-number-of-listens').innerHTML = "Total Scrobble Count: ";
+    document.getElementById('scrobbled-by').innerHTML = "Scrobbled by: ";
 }
