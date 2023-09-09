@@ -52,15 +52,19 @@ let useData = async () => {
     let coverP = document.getElementById('album-cover');
     // assigns the image retrieved in getData to the div with the id album-cover
     coverP.appendChild(cover);
+
     cover.addEventListener('click', function(event) {
         window.open(data.recenttracks.track[0].url);
     })
+
     document.getElementById('coverElement').style.cursor = 'pointer'
+
     let nowPlayingP = document.getElementById('listening-now');
     if (nowplaying != null) {
         nowplayingText = document.createTextNode(`${user} is listening right now!`);
         nowPlayingP.appendChild(nowplayingText)
     }
+
     // gets the paragraph with the id song-name and assigns it to a variable named songP
     let songP = document.getElementById('song-name');
     // creates new text node with data from songName variable

@@ -18,8 +18,6 @@
 
 ### Still to do:
 
-Tablet/Deskop column based design
-
 Re-do intro screen
 
 Add error handling
@@ -27,5 +25,3 @@ Add error handling
 Add depth to general design
 
 Add light theme, and theme switch
-
-Reorganise code
