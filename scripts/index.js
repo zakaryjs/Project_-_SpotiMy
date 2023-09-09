@@ -11,17 +11,7 @@ form.addEventListener("submit", function(event) {
     url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${newValue}&limit=1&nowplaying=true&format=json&api_key=${apiKey}`;
     useData();
     form.reset();
-        setInterval(async () => {
-            const newResponse = await fetch(url);
-            newData = await newResponse.json();
-            if (newData.recenttracks.track[0].name == data.recenttracks.track[0].name) {
-                console.log('Song has not changed.');
-            } else {
-                    clearData();
-                    console.log('Song changed! Updating data now...')
-                    useData();
-            }
-        }, 20000);
+    setInterval(refreshData, 20000);
 })
 
 // async function to get the json from the url provided
@@ -43,6 +33,8 @@ let getData = async () => {
     cover = new Image();
     cover.src = data.recenttracks.track[0].image[3]['#text'];
     cover.setAttribute('id', 'coverElement')
+    cover.style.border = "2px solid white"
+    cover.style.borderRadius = "4px"
     nowplaying = data.recenttracks.track[0]['@attr'] ? data.recenttracks.track[0]['@attr'].nowplaying : null
     return data;
 }
@@ -109,4 +101,16 @@ let clearData = () => {
     document.getElementById('artist-name').innerHTML = "";
     document.getElementById('total-number-of-listens').innerHTML = "Total Scrobble Count: ";
     document.getElementById('scrobbled-by').innerHTML = "Scrobbled by: ";
+}
+
+let refreshData = async () => {
+    const newResponse = await fetch(url);
+    newData = await newResponse.json();
+    if (newData.recenttracks.track[0].name == data.recenttracks.track[0].name) {
+        console.log('Song has not changed.');
+    } else {
+            clearData();
+            console.log('Song changed! Updating data now...')
+            useData();
+    }
 }
