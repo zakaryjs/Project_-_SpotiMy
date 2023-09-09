@@ -5,9 +5,10 @@ form.addEventListener("submit", function(event) {
     event.preventDefault();
     element.remove();
     clearData();
+    let apiKey = ''
     let newValue = ((document.getElementById('search-name').value));
     console.log(newValue);
-    url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${newValue}&api_key=&limit=1&nowplaying=true&format=json`;
+    url = `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${newValue}&limit=1&nowplaying=true&format=json&api_key=${apiKey}`;
     useData();
     form.reset();
         setInterval(async () => {
