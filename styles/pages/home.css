@@ -27,6 +27,7 @@ main form {
   outline: white;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 40px;
 }
 main input {
   all: unset;
