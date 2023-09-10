@@ -18,6 +18,12 @@ form.addEventListener("submit", function(event) {
 let getData = async () => {
     const response = await fetch(url);
     data = await response.json();
+    if (data.error) {
+        console.log(`Uh oh! There has been error!`);
+        console.log(`Error code: ${data.error}`);
+        console.log(`Error message: ${data.message}`);
+        return false
+    }
     console.log(data);
     // assign most recent song to songName variable
     songName = data.recenttracks.track[0].name;
@@ -51,7 +57,8 @@ let useData = async () => {
     // gets the div with the id album-cover and assigns it to a variable named coverP
     let coverP = document.getElementById('album-cover');
     // assigns the image retrieved in getData to the div with the id album-cover
-    coverP.appendChild(cover);
+    try {
+        coverP.appendChild(cover);
 
     cover.addEventListener('click', function(event) {
         window.open(data.recenttracks.track[0].url);
@@ -95,6 +102,10 @@ let useData = async () => {
     let userText = document.createTextNode(user);
     // assigns userText node to the scrobbled-by paragraph 
     userP.appendChild(userText);
+    } catch (error) {
+        
+    }
+    
 }
 
 let clearData = () => {
@@ -108,7 +119,8 @@ let clearData = () => {
 }
 
 let refreshData = async () => {
-    const newResponse = await fetch(url);
+    try {
+        const newResponse = await fetch(url);
     newData = await newResponse.json();
     if (newData.recenttracks.track[0].name == data.recenttracks.track[0].name) {
         console.log('Song has not changed.');
@@ -117,4 +129,8 @@ let refreshData = async () => {
             console.log('Song changed! Updating data now...')
             useData();
     }
+    } catch (error) {
+
+    }
+    
 }
