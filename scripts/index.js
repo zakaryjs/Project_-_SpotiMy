@@ -1,5 +1,6 @@
 var element = document.getElementById('site-first-load');
 let form = document.getElementById('search-bar-form');
+var errorPlaceholder = "https://lastfm.freetls.fastly.net/i/u/300x300/4128a6eb29f94943c9d206c08e625904.jpg"
 
 form.addEventListener("submit", function(event) {
     event.preventDefault();
@@ -19,6 +20,7 @@ let getData = async () => {
     const response = await fetch(url);
     data = await response.json();
     if (data.error) {
+        errorData();
         console.log(`Uh oh! There has been error!`);
         console.log(`Error code: ${data.error}`);
         console.log(`Error message: ${data.message}`);
@@ -66,7 +68,7 @@ let useData = async () => {
 
     document.getElementById('coverElement').style.cursor = 'pointer'
 
-    let nowPlayingP = document.getElementById('listening-now');
+    nowPlayingP = document.getElementById('listening-now');
     if (nowplaying != null) {
         nowplayingText = document.createTextNode(`${user} is listening right now!`);
         nowPlayingP.appendChild(nowplayingText)
@@ -133,4 +135,35 @@ let refreshData = async () => {
 
     }
     
+}
+
+let errorData = () => {
+    nowplaying = null;
+    songName = '';
+    albumName = '';
+    artistName = '';
+    scrobbleCount = '';
+    user = '';
+    cover = new Image();
+    cover.src = errorPlaceholder;
+    cover.setAttribute('id', 'coverElement')
+    cover.style.border = "2px solid white"
+    cover.style.borderRadius = "4px"
+    let coverP = document.getElementById('album-cover');
+    coverP.appendChild(cover);
+    let nowPlayingP = document.getElementById('listening-now');
+    let nowplayingText = document.createTextNode("")
+    nowPlayingP.appendChild(nowplayingText)
+    let songP = document.getElementById('song-name');
+    let songText = document.createTextNode(`Error!`);
+    songP.appendChild(songText);
+    let albumP = document.getElementById('album-name');
+    let albumText = document.createTextNode(`${data.message}`);
+    albumP.appendChild(albumText);
+    let artistP = document.getElementById('artist-name');
+    let artistText = document.createTextNode(`Error code: ${data.error}`);
+    artistP.appendChild(artistText);
+    document.getElementById('total-number-of-listens').innerHTML = "";
+    document.getElementById('scrobbled-by').innerHTML = "";
+
 }
