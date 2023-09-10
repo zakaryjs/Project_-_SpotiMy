@@ -20,8 +20,6 @@
 
 Re-do intro screen
 
-Add error handling
-
 Add depth to general design
 
 Add light theme, and theme switch
