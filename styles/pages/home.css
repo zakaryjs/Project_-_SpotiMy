@@ -43,10 +43,10 @@ main input:focus::placeholder {
   color: transparent;
 }
 main ::-moz-placeholder {
-  color: #1DB954;
+  color: white;
 }
 main ::placeholder {
-  color: #1DB954;
+  color: white;
 }
 main img {
   display: flex;
