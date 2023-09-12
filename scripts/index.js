@@ -208,6 +208,8 @@ let changeTheme = () => {
         document.getElementById("footer-tag").style.backgroundColor = "#1DB954"
         document.getElementById("footer-tag").style.color = "white"
         document.getElementById("search-bar-form").style.backgroundColor = "#1DB954"
+        document.getElementById("theme-change-button").style.color = "black"
+        document.getElementById("theme-change-button").style.backgroundColor = "black"
     } else {
         element.classList.toggle("default")
         document.body.style.border = "5px solid #1DB954"
@@ -218,5 +220,7 @@ let changeTheme = () => {
         document.getElementById("footer-tag").style.backgroundColor = "black"
         document.getElementById("footer-tag").style.color = "#1DB954"
         document.getElementById("search-bar-form").style.backgroundColor = "black"
+        document.getElementById("theme-change-button").style.color = "#1DB954"
+        document.getElementById("theme-change-button").style.backgroundColor = "#1DB954"
     }
 }
