@@ -11,7 +11,7 @@ form.addEventListener("submit", function(event) {
     // clears any data in album/song divs
     clearData();
     // PLACE API KEY BELOW, BETWEEN QUOTE MARKS!
-    let apiKey = '';
+    let apiKey = process.env.APIKEY;
     // assigns search bar value to newValue variable
     let newValue = ((document.getElementById('search-name').value));
     // logs search bar value to console
