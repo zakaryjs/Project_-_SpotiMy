@@ -15,11 +15,3 @@
 ### - The song name, album name, artist name are all displayed below the album cover. The user who is listening to the song, and their total scrobble count will also be displayed.
 
 <br>
-
-### Still to do:
-
-Re-do intro screen
-
-Add depth to general design
-
-Add light theme, and theme switch
