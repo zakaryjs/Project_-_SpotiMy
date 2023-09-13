@@ -132,6 +132,7 @@ main #song-name {
 
 .light-mode {
   border: 5px solid white;
+  background-color: #1DB954;
 }
 .light-mode body {
   background-color: #1DB954;

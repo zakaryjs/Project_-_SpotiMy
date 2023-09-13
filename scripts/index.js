@@ -2,7 +2,6 @@ var element = document.getElementById('site-first-load');
 let form = document.getElementById('search-bar-form');
 var errorPlaceholder = "https://lastfm.freetls.fastly.net/i/u/300x300/4128a6eb29f94943c9d206c08e625904.jpg";
 
-
 // event listener for the search bar which displays the searched users song data
 form.addEventListener("submit", function(event) {
     // prevents default page reload
@@ -11,9 +10,7 @@ form.addEventListener("submit", function(event) {
     element.remove();
     // clears any data in album/song divs
     clearData();
-    //
     // PLACE API KEY BELOW, BETWEEN QUOTE MARKS!
-    //
     let apiKey = '';
     // assigns search bar value to newValue variable
     let newValue = ((document.getElementById('search-name').value));
