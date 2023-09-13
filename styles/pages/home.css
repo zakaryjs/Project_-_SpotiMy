@@ -106,4 +106,51 @@ main #song-name {
     margin-top: 4%;
     font-size: 40px;
   }
+}
+.dark-mode body {
+  border: 5px solid #1DB954;
+  background-color: black;
+}
+.dark-mode main {
+  background-color: black;
+}
+.dark-mode form {
+  background-color: black;
+}
+.dark-mode header {
+  background-color: black;
+  color: #1DB954;
+}
+.dark-mode header #theme-change-button {
+  color: #1DB954;
+  background-color: #1DB954;
+}
+.dark-mode footer {
+  background-color: black;
+  color: #1DB954;
+}
+
+.light-mode {
+  border: 5px solid white;
+}
+.light-mode body {
+  background-color: #1DB954;
+}
+.light-mode main {
+  background-color: #1DB954;
+}
+.light-mode form {
+  background-color: #1DB954;
+}
+.light-mode header {
+  background-color: #1DB954;
+  color: white;
+}
+.light-mode header #theme-change-button {
+  color: black;
+  background-color: black;
+}
+.light-mode footer {
+  background-color: #1DB954;
+  color: white;
 }/*# sourceMappingURL=home.css.map */

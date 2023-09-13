@@ -198,29 +198,11 @@ let errorData = () => {
 
 let changeTheme = () => {
     let element = document.getElementById("body-tag")
-    if (element.classList.contains("default")) {
-        element.classList.toggle("default")
-        document.body.style.border = "5px solid white"
-        document.body.style.backgroundColor = "#1DB954"
-        document.getElementById("main-tag").style.backgroundColor = "#1DB954"
-        document.getElementById("header-tag").style.backgroundColor = "#1DB954"
-        document.getElementById("header-tag").style.color = "white"
-        document.getElementById("footer-tag").style.backgroundColor = "#1DB954"
-        document.getElementById("footer-tag").style.color = "white"
-        document.getElementById("search-bar-form").style.backgroundColor = "#1DB954"
-        document.getElementById("theme-change-button").style.color = "black"
-        document.getElementById("theme-change-button").style.backgroundColor = "black"
+    if (element.classList.contains("dark-mode")) {
+        element.classList.toggle("dark-mode")
+        element.classList.toggle("light-mode")
     } else {
-        element.classList.toggle("default")
-        document.body.style.border = "5px solid #1DB954"
-        document.body.style.backgroundColor = "black"
-        document.getElementById("main-tag").style.backgroundColor = "black"
-        document.getElementById("header-tag").style.backgroundColor = "black"
-        document.getElementById("header-tag").style.color = "#1DB954"
-        document.getElementById("footer-tag").style.backgroundColor = "black"
-        document.getElementById("footer-tag").style.color = "#1DB954"
-        document.getElementById("search-bar-form").style.backgroundColor = "black"
-        document.getElementById("theme-change-button").style.color = "#1DB954"
-        document.getElementById("theme-change-button").style.backgroundColor = "#1DB954"
+        element.classList.toggle("light-mode")
+        element.classList.toggle("dark-mode")
     }
 }

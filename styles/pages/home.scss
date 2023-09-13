@@ -106,3 +106,54 @@ main {
         font-size: 40px;
     }
 }
+
+
+.dark-mode {
+    body {
+        border: 5px solid #1DB954;
+        background-color: black;
+    }
+    main {
+        background-color: black;
+    }
+    form {
+        background-color: black;
+    }
+    header {
+        background-color: black;
+        color: 	#1DB954;
+        #theme-change-button {
+            color: #1DB954;
+            background-color: #1DB954;
+        }
+    }
+    footer {
+        background-color: black;
+        color: 	#1DB954;
+    }
+}
+
+.light-mode {
+    border: 5px solid white;
+    body {
+        background-color: #1DB954;
+    }
+    main {
+        background-color: #1DB954;
+    }
+    form {
+        background-color: #1DB954;
+    }
+    header {
+        background-color: #1DB954;
+        color: 	white;
+        #theme-change-button {
+            color: black;
+            background-color: black;
+        }
+    }
+    footer {
+        background-color: #1DB954;
+        color: 	white;
+    }
+}
