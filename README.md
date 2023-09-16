@@ -1,3 +1,7 @@
+
+
+https://github.com/zakaryjs/Project_-_SpotiMy/assets/119669322/cf4be367-e835-4471-8293-527ab1d2aac9
+
 # SpotiMy
 
 ## <i>Note: requires last.fm API key, get one here: https://www.last.fm/api</i>
